@@ -46,6 +46,10 @@ plot(y = tail(canadaIncrease, -1),
      col = 'black', 
      ylim = c(min(c(tail(canadaIncrease, -1), tail(internationalIncrease, -1))),
               max(c(tail(canadaIncrease, -1), tail(internationalIncrease, -1)))),
-     x = 2007:2016)
+     x = 2007:2016, xlab = "Year", ylab ="% Increase in Tuition")
 
-lines(internationalIncrease, type = 'l', col = 'red')
+lines(y = tail(internationalIncrease, -1), x = 2007:2016,
+      type = 'l', col = 'red')
+
+plot(x = 2006:2016, y = internationalTS/canadaTS, xlab = "Year",
+     ylab = "Int / Domestic Student Tuition", type = 'l', col = 'blue')
